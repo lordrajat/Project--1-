@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CraftWonders | Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="a.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Mirza:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Mirza:wght@400;500;600;700&family=Tienne:wght@400;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Mirza:wght@400;500;600;700&family=Ruthie&family=Tienne:wght@400;700;900&display=swap"
+    rel="stylesheet" />
+
+
+
+
+  <!-- styling part -->
+  <style>
+    body {
+      width: 100%;
+
+      margin: 0px;
+      padding: 0px;
+      z-index: 0;
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            top:30px;
+            transition: opacity 0.3s;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .top{
+            display: flex;
+            width: 100%;
+            height: 60px;
+            align-items: center;
+        }
+        .name{
+            font-size: 60px;
+            color: rgb(0, 0, 0);
+            font-family:'Raleway';
+            color: white;
+        }
+        .body-img{
+            background-image: url('https://www.gaurikohli.com/cdn/shop/articles/India_Handicraft_Exporters-A_6.jpg?v=1679305506&width=2560'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-color:black;
+            height: 45vh; 
+            margin: 3px; 
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .top ul{
+            list-style: none;
+            display: flex;
+            width: 59%;
+            align-items: center;
+            padding: 20px;
+            margin-left: 40px;
+            
+        }
+        #title{
+            font-size: 25px;
+            margin-left: 10px;
+        }
+
+        .top p{
+            font-family: "Madimi One", sans-serif;
+            color: rgb(3, 107, 107);
+            margin-right: 250px;
+        }
+        .top ul li{
+            padding: 20px;
+            margin-right: 0px;
+            font-size: 20px;
+        }
+        .top ul li:hover{
+            
+            color:rgba(167, 93, 93, 0.89) ;
+            cursor: pointer;
+            scale: 1.08;
+        }
+
+    .buttons {
+      position: relative;
+      right: -500px;
+      transition: all 0.2s;
+    }
+
+    .buttons button {
+      border-radius: 50%;
+      border: 0.1px solid b0px, serif;
+    }
+
+    .buttons input {
+      display: none;
+      width: 250px;
+      height: 30px;
+      border-radius: 3px;
+      transition: all 0.2s ease;
+    }
+
+    .buttons img {
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+    }
+
+    .slideshow {
+      width: 100%;
+      height: 520px;
+      color: rgb(8, 24, 255);
+      border: 2px 4px;
+    }
+
+    .posts p {
+      font-family: "Ruthie", cursive;
+      text-align: center;
+      color: rgb(66, 57, 57);
+      font-size: 50px;
+    }
+
+    #text {
+      font-size: 20px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: rgb(66, 65, 65);
+      margin-top: -50px;
+      font-weight: 400;
+    }
+
+    #tex {
+      font-size: 20px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: rgb(102, 106, 110);
+    }
+
+    #slideshow {
+      width: 85%;
+      height: 550px;
+    }
+
+    .slideshow-container {
+
+      width: 90%;
+      height: 700px;
+      margin: auto;
+      z-index: 5;
+    }
+
+    .slideshow-container img {
+      height: 600px;
+      object-fit: cover;
+      transition: all 0.2s ease;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 45%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .next {
+      right: 120px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev {
+
+      left: 120px;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .dot-container {
+      text-align: center;
+      padding: 10px;
+      z-index: 7;
+      margin-top: -175px;
+      background: transparent;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active {
+      background-color: #3c3232;
+    }
+
+    .show {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 600px;
+      margin-top: 10px;
+    }
+
+    .cont {
+      width: 250px;
+      height: 500px;
+      box-sizing: border-box;
+      border: 1px solid rgb(83, 80, 80);
+      box-shadow: 2px 3px 2px rgb(128, 123, 123);
+      display: inline;
+      margin-right: 10px;
+    }
+
+    .cont img {
+      width: 250px;
+      height: 500px;
+      object-fit: fill;
+    }
+
+    #down,
+    #dow {
+      position: relative;
+      bottom: -70px;
+    }
+
+    .sale {
+      width: 100%;
+      height: 1100px;
+      background-color: rgb(255, 236, 225);
+    }
+
+    #best {
+      font-family: "Ruthie", cursive;
+      text-align: center;
+      color: rgb(66, 57, 57);
+      font-size: 50px;
+    }
+
+    #new {
+      font-size: 30px;
+      text-align: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin-top: -30px;
+      margin-bottom: 0px;
+    }
+
+    .container {
+      width: 100%;
+      height: 450px;
+      display: flex;
+      margin-top: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .item {
+      width: 350px;
+      height: 380px;
+      background-color: #838176;
+      margin-top: 10px;
+      margin-right: 20px;
+      border: 2px solid rgb(169, 205, 255);
+    }
+
+    .item img {
+      width: 330px;
+      height: 280px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    #bestpicks {
+      font-family: "Ruthie", cursive;
+      text-align: center;
+      color: rgb(66, 57, 57);
+      font-size: 50px;
+    }
+
+    .bestpicks {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      height: 800px;
+    }
+
+    #limage {
+      width: 80%;
+      height: 400px;
+    }
+
+    .content {
+      width: 100%;
+      display: flex;
+      height: 100px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 70px;
+    }
+
+    .conten {
+      width: 20%;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .conten img {
+      height: 100px;
+      color: black;
+      display: inline;
+      transition: all 0.15s ease-in;
+    }
+
+    #gift {
+      width: 100px;
+    }
+
+    #truck {
+      width: 140px;
+    }
+
+    #phone {
+      width: 100px;
+    }
+
+    #shield {
+      width: 100px;
+    }
+
+    .contentext {
+      font-size: 24px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: rgb(65, 58, 58);
+      margin-top: 10px;
+      margin-bottom: -15px;
+    }
+
+
+    .contenttext {
+      font-size: 15px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: rgb(131, 122, 122);
+    }
+
+    .conten img:hover {
+      scale: 0.9;
+    }
+
+    .conti {
+      width: 70%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      margin-top: 50px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #cr {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: #503b3b;
+      font-size: large;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .review {
+      text-align: center;
+      margin-bottom: 30px;
+      display: none;
+    }
+
+    .review.active {
+      display: inline;
+    }
+
+    .review img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 40px;
+      align-self: center;
+      margin-left: 450px;
+    }
+
+    .review h2 {
+      margin: 5px 0;
+      color: #1f192d;
+    }
+
+    .review p {
+      margin: 0;
+      color: #666;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image: url('https://img.freepik.com/free-vector/watercolor-terracotta-background-design_23-2149536616.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714089600&semt=ais');
+      background-color: rgba(255, 255, 255, 0);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      object-fit: fill;
+    }
+
+    .footer ul {
+      list-style-type: none;
+      list-style: none;
+
+      color: black;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer ul li {
+      text-decoration: none;
+      margin-right: 20px;
+
+    }
+
+    .footer ul li:hover {
+      color: rgb(122, 91, 91)
+    }
+
+    .footer ul li a {
+      width: 20px;
+      height: 20px;
+      text-decoration: none;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 20px;
+      color: rgb(81, 43, 43);
+    }
+
+    .footer ul li a:hover {
+
+      color: #000000;
+    }
+
+    .footericons {
+      width: 20px;
+      height: 20px;
+    }
+
+    .footer p {
+      font-size: 20px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .footericons:hover {
+      scale: 1.2;
+    }
+
+    #emails,
+    #subscribe {
+      height: 30px;
+
+    }
+
+    #emails {
+      width: 300px;
+      padding-left: 15px;
+    }
+
+    #subscribe {
+      width: 100px;
+      height: 35px;
+      background-color: rgb(72, 52, 52);
+      color: white;
+      border: 0px;
+      font-size: 15px;
+    }
+
+    #subscribe:hover {
+      color: rgb(92, 61, 51);
+      background-color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body id="body">
+  <%- include('./partials/nav.ejs',{cartItems:cartItems}) %>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="https://images.jdmagicbox.com/quickquotes/listicle/listicle_1701248147022_gha3h_1000x667.jpg"
+        style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://atasteofafrica.net/cdn/shop/collections/bowls2_1350x1013.png?v=1644589815" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img
+        src="https://www.afomamarketplace.com/_next/image?url=https%3A%2F%2Fresources.afomamarketplace.com%2Fwp-content%2Fuploads%2F2023%2F07%2Fpexels-karolina-grabowska-4219654-scaled.jpg&w=3840&q=75"
+        style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img
+        src="https://images.unsplash.com/photo-1608793733118-ee3f16002251?q=80&w=1993&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://wpengine-myanmore.s3.amazonaws.com/uploads/2022/06/FB_IMG_1656326684029.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+  <br>
+
+  <div class="dot-container" style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+  <div class="posts">
+    <p>Just for you</p>
+    <p id="text" class="dark">Welcome to CraftWonders</p>
+    <p id="tex" class="dark">
+      Our dreamy crafts are inspired by the nature and travel,moments and
+      memories.
+    </p>
+  </div>
+  <div class="show">
+    <div class="cont">
+      <img
+        src="https://images.unsplash.com/photo-1611987583184-1ddc69fbd5ee?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="" />
+    </div>
+    <div class="cont" id="dow">
+      <img
+        src="https://images.unsplash.com/photo-1627237072130-a20fdded539c?q=80&w=1902&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="" />
+    </div>
+    <div class="cont">
+      <img
+        src="https://images.unsplash.com/photo-1627237071540-ebb50bd4bf91?q=80&w=1928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="" />
+    </div>
+    <div class="cont" id="down">
+      <img
+        src="https://images.unsplash.com/photo-1589051095874-5caef81e6243?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="" />
+    </div>
+    <div class="cont">
+      <img
+        src="https://images.unsplash.com/photo-1606074508174-6fa572bd2777?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="" />
+    </div>
+  </div>
+  <div class="sale">
+    <p id="best">Best for you</p>
+    <p id="new">New collection best seller</p>
+    <div class="container">
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1641582163459-0e44f4d331b8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="">
+        <p class="info"></p>
+        <p class="price"></p>
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1548368486-27fe2be77b23?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="">
+        <p class="info"></p>
+        <p class="price"></p>
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1627237071420-a0875e1c421a?q=80&w=1948&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="">
+        <p class="info"></p>
+        <p class="price"></p>
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1613274507376-36c83a7f4a99?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="">
+        <p class="info"></p>
+        <p class="price"></p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1686170581457-22b6c513f6a5?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="">
+        <p class="info"></p>
+        <p class="price"></p>
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1672582357064-fb7f9743d908?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="">
+        <p class="info"></p>
+        <p class="price"></p>
+      </div>
+      <div class="item">
+        <img
+          src="https://images.unsplash.com/photo-1674069698102-682409828872?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="">
+        <p class="info"></p>
+        <p class="price"></p>
+      </div>
+      <div class="item">
+        <img
+          src="https://media.istockphoto.com/id/695168116/photo/paper-mache-boxes.jpg?s=2048x2048&w=is&k=20&c=PRAMMgS2Xfz8RdxxGJE7U7xS9lh71d1zbU-2-RvYV9Q="
+          alt="">
+        <p class="info"></p>
+        <p class="price"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="conten"><img id="gift"
+        src="https://cdn.iconscout.com/icon/free/png-256/free-gift-box-1970466-1669856.png?f=webp" alt="">
+      <p class="contentext">Free easy returns</p>
+      <p class="contenttext">return to 7 days</p>
+    </div>
+    <div class="conten"><img id="truck" src="https://www.iconpacks.net/icons/1/free-truck-icon-1058-thumb.png" alt="">
+      <p class="contentext">Free delivery monday</p>
+      <p class="contenttext">orders above &#8377;999</p>
+    </div>
+    <div class="conten"><img id="phone" src="https://cdn-icons-png.freepik.com/256/1/1257.png?semt=ais_hybrid" alt="">
+      <p class="contentext">All day support</p>
+      <p class="contenttext">24/7 support care</p>
+    </div>
+    <div class="conten"><img id="shield" src="https://pngfre.com/wp-content/uploads/Shield-1.png" alt="">
+      <p class="contentext">Secure checkout</p>
+      <p class="contenttext">100% verified by paypal</p>
+    </div>
+  </div>
+
+
+
+  <!-- nextlines -->
+  <div class="conti">
+    <p id="cr">Customer reviews</p>
+    <div class="review active">
+      <img
+        src="https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38="
+        alt="Customer Image">
+      <h2>Aarav Kashyap</h2>
+      <p>"An exquisite collection of handmade treasures, this website is a haven for craft enthusiasts seeking unique,
+        artisanal pieces."</p>
+    </div>
+    <div class="review">
+      <img
+        src="https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?cs=srgb&dl=pexels-olly-874158.jpg&fm=jpg"
+        alt="Customer Image">
+      <h2>Rajat Apurva</h2>
+      <p>"Navigating this handicrafts website felt like strolling through a vibrant marketplace, each item telling its
+        own story through skilled craftsmanship."</p>
+    </div>
+    <div class="review">
+      <img
+        src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg"
+        alt="Customer Image">
+      <h2>Manasvi</h2>
+      <p>"A seamless online experience coupled with an array of meticulously crafted goods makes this website a go-to
+        destination for anyone with an eye for quality handiwork."</p>
+    </div>
+    <button class="btn" id="prevBtn">Previous</button>
+    <button class="btn" id="nextBtn">Next</button>
+  </div>
+
+
+  <div class="footer">
+    <ul>
+      <li><a href="#">About us</a></li>
+      <li><a href="./blog">Blog</a></li>
+      <li><a href="./contact-us">Contact us</a></li>
+    </ul>
+    <h2>Newsletter</h2>
+    <p>Get on the list and get 10% off on your first order</p>
+    <div id="emailss"><input type="text" id="emails" placeholder="email address">
+      <button id='subscribe'>Subscribe</button>
+    </div>
+    <ul>
+      <li class="footericons"><i class="fa fa-facebook"></i></li>
+      <li class="footericons"><i class="fa fa-instagram"></i></li>
+      <li class="footericons"><i class="fa fa-whatsapp"></i></li>
+      <li class="footericons"><i class="fa fa-twitter"></i></li>
+      <li class="footericons"><i class="fa fa-youtube"></i></li>
+    </ul>
+    <p>Copyright &#169; 2024 craftwonders all rights reserved</p>
+  </div>
+</body>
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  setInterval(function () { plusSlides(1) }, 2000);
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+  var searchstatus = 1;
+
+  function search() {
+    var search = document.getElementById('searchbar');
+    if (searchstatus === 1) {
+      search.style.display = 'inline';
+      document.getElementsByClassName('buttons')[0].style.right = '-250px';
+      searchstatus = 0;
+    } else {
+      search.style.display = 'none';
+      document.getElementsByClassName('buttons')[0].style.right = '-450px';
+      searchstatus = 1;
+    }
+  }
+
+  const reviews = document.querySelectorAll('.review');
+  let currentindex = 0;
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  function showreview(index) {
+    reviews.forEach((review, i) => {
+      if (i === index) {
+        review.classList.add('active');
+      } else {
+        review.classList.remove('active');
+      }
+    });
+  }
+
+  showreview(currentindex);
+
+  prevBtn.addEventListener('click', function () {
+    currentindex = (currentindex - 1 + reviews.length) % reviews.length;
+    showreview(currentindex);
+  });
+
+  nextBtn.addEventListener('click', function () {
+    currentindex = (currentindex + 1) % reviews.length;
+    showreview(currentindex);
+  });
+  setInterval(function () {
+    showreview(currentindex);
+    currentindex = (currentindex + 1) % reviews.length;
+  }, 3000);
+  var index = 1;
+  function darkmode() {
+    if (index === 0) {
+      index = 1;
+      window.location.reload();
+    }
+    else {
+      document.getElementById('body').style.backgroundColor = '#1b1c1f';
+      var f1 = document.getElementsByClassName('dark')[0];
+      var f2 = document.getElementsByClassName('dark')[1];
+      var f3 = document.getElementsByClassName('dark')[2];
+      var f4 = document.getElementsByClassName('dark')[3];
+      var f5 = document.getElementsByClassName('dark')[4];
+      var f6 = document.getElementsByClassName('dark')[5];
+      var f7 = document.getElementsByClassName('dark')[6];
+      var f8 = document.getElementsByClassName('dark')[7];
+      var f9 = document.getElementsByClassName('dark')[8];
+      f1.style.color = 'white';
+      f2.style.color = 'white';
+      f3.style.color = 'white';
+      f4.style.color = 'white';
+      f5.style.color = 'white';
+      f6.style.color = 'white';
+      f7.style.color = 'white';
+      f8.style.color = 'white';
+      f9.style.color = 'white';
+      index = 0;
+    }
+  }
+</script>
+
+</html>

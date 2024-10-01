@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Mirza:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Mirza:wght@400;500;600;700&family=Tienne:wght@400;700;900&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Mirza:wght@400;500;600;700&family=Ruthie&family=Tienne:wght@400;700;900&display=swap"
+    rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>CraftWonders | Blog</title>
+    <style>
+        .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #000000;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 9;
+        bottom: 125%;
+        left: 50%;
+        top:30px;
+        margin-left: -60px; 
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+        .top{
+            display: flex;
+            width: 100%;
+            height: 60px;
+            align-items: center;
+        }
+
+        .top ul{
+            list-style: none;
+            display: flex;
+            width: 59%;
+            align-items: center;
+            padding: 20px;
+            margin-left: 40px;
+            
+        }
+        #title{
+            font-size: 25px;
+            margin-left: 10px;
+        }
+
+        .top p{
+            font-family: "Madimi One", sans-serif;
+            color: rgb(3, 107, 107);
+            margin-right: 250px;
+        }
+        .top ul li{
+            padding: 20px;
+            margin-right: 0px;
+            font-size: 20px;
+        }
+        .top ul li:hover{
+            
+            color:rgba(167, 93, 93, 0.89) ;
+            cursor: pointer;
+            scale: 1.08;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            color: #2E8B57;
+            margin-bottom: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #666;
+        }
+        nav ul li a:hover {
+            color: #2E8B57;
+        }
+        article {
+            margin-bottom: 30px;
+        }
+        article h2 {
+            color: #2E8B57;
+            margin-bottom: 20px;
+        }
+        article h3 {
+            color: #9b5b2a;
+            margin-bottom: 10px;
+        }
+        article p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <%- include('./partials/nav.ejs',{cartItems:cartItems}) %>
+    <div class="container">
+        <article>
+            <h2>The Art of Crafting: Turning Passion into Profit</h2>
+            <p>At Crafters' Corner, we celebrate the artistry and dedication of craftsmen who transform raw materials into beautiful, handcrafted products. But crafting isn't just a hobby—it's a thriving business for many talented artisans. In this blog post, we explore the journey of turning passion into profit.</p>
+
+            <h3>Finding Your Niche</h3>
+            <p>Every craftsman has a unique style and skill set. Whether you specialize in woodworking, pottery, jewelry-making, or any other craft, finding your niche is crucial for success. Identify your strengths and interests, and let them guide your creative journey.</p>
+
+            <h3>Showcasing Your Creations</h3>
+            <p>Once you've honed your craft, it's time to showcase your creations to the world. Crafters' Corner provides a platform for artisans to sell their products online, reaching a global audience of craft enthusiasts. Create a compelling product listing that highlights the unique features and craftsmanship of your creations.</p>
+
+            <h3>Building Your Brand</h3>
+            <p>Building a strong brand identity is essential for standing out in the competitive world of crafting. Develop a cohesive brand aesthetic that reflects your style and values. Engage with your audience through social media, email newsletters, and craft fairs to build a loyal customer base.</p>
+
+            <h3>Turning Passion into Profit</h3>
+            <p>With dedication and perseverance, you can turn your passion for crafting into a profitable business. Focus on quality, customer satisfaction, and continuous improvement to ensure long-term success. Embrace the journey, and let your creativity fuel your entrepreneurial spirit.</p>
+
+            <p>Are you ready to take the next step in your crafting journey? Join us at Crafters' Corner and start selling your handmade products today!</p>
+        </article>
+        <article>
+            <h2>The Joy of Handmade Crafts</h2>
+            <p>At Crafters' Corner, we believe that handmade crafts bring joy to both creators and recipients alike. There's something special about receiving a handmade gift or decorating your home with unique, artisanal pieces that can't be replicated by mass-produced items.</p>
+        
+            <h3>Connecting with Creativity</h3>
+            <p>Crafting allows us to connect with our creativity in a meaningful way. Whether you're knitting a cozy scarf, painting a vibrant canvas, or sculpting a delicate figurine, the act of creating something with your own hands is deeply fulfilling. It's a way to express yourself, unleash your imagination, and bring your visions to life.</p>
+        
+            <h3>Appreciating Artisanal Skills</h3>
+            <p>Behind every handmade product is an artisan who has honed their skills over years of practice and dedication. From mastering intricate techniques to experimenting with new materials, artisans pour their hearts and souls into each creation. By supporting handmade crafts, we celebrate the talent and craftsmanship of these skilled individuals.</p>
+        
+            <h3>Embracing Sustainability</h3>
+            <p>Handmade crafts also offer an environmentally friendly alternative to mass-produced goods. By choosing handmade products, we reduce our carbon footprint and support sustainable practices. Additionally, many artisans use eco-friendly materials and production methods, further contributing to a healthier planet.</p>
+        
+            <h3>Spreading Happiness</h3>
+            <p>There's a unique joy that comes from giving and receiving handmade gifts. Whether it's a birthday present, a holiday ornament, or a token of appreciation, handmade crafts carry a personal touch that can't be replicated. They evoke warmth, thoughtfulness, and love, making them cherished treasures for years to come.</p>
+        
+            <p>Join us in celebrating the joy of handmade crafts at Crafters' Corner. Explore our curated collection of artisanal products and discover the beauty of handmade craftsmanship.</p>
+        </article>
+        
+    </div>
+</body>
+</html>

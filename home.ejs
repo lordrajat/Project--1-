@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--<link rel="stylesheet" href="a.css" />-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Mirza:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Mirza:wght@400;500;600;700&family=Tienne:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Mirza:wght@400;500;600;700&family=Ruthie&family=Tienne:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body{
+          width: 100%;
+          height: 10000px;
+          margin: 0px;
+          padding: 0px;
+          z-index: 0;
+      }
+      .top{
+          display: flex;
+          width: 100%;
+          height: 60px;
+          align-items: center;
+      }
+      .top ul{
+          list-style: none;
+          display: flex;
+          
+          align-items: center;
+          padding: 20px;
+          margin-left: 40px;
+          
+      }
+      #title{
+          font-size: 25px;
+          margin-left: 10px;
+          margin-right: 100px;
+      }
+      .top p{
+          font-family: "Madimi One", sans-serif;
+          color: rgb(3, 107, 107);
+          
+      }
+      .top ul li{
+          padding: 20px;
+          margin-right: 20px;
+          font-size: 20px;
+      }
+      .top ul li:hover{
+          
+          color:rgba(167, 93, 93, 0.89) ;
+          cursor: pointer;
+          scale: 1.08;
+      }
+      .buttons{
+          position: relative;
+          right: -500px;
+          transition: all 0.2s;
+      }
+      .buttons button{
+          border-radius: 50%;
+          border: 0.1px solid b0px, serif;
+      }
+      .buttons input{
+          display: none;
+          width: 250px;
+          height: 30px;
+          border-radius: 3px;
+          transition: all 0.2s ease;
+      }
+      .buttons img{
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+      }
+      .slideshow{
+          width: 100%;
+          height: 520px;
+          color: rgb(8, 24, 255);
+          border: 2px 4px;
+      }
+      .posts p{
+          font-family: "Ruthie", cursive;
+          text-align: center;
+          color: rgb(159, 100, 214);
+          font-size: 50px;
+      }
+      #text{
+          font-size: 20px;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          color: rgb(66, 65, 65);
+          margin-top: -50px;
+          font-weight: 400;
+      }
+      #tex{
+          font-size: 20px;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          color: rgb(102, 106, 110);
+      }
+      #slideshow{
+          width: 85%;
+          height: 550px;
+      }
+      .slideshow-container {
+          
+          width: 90%;
+          height: 700px;
+          margin: auto;
+          z-index: 5;
+      }
+      .slideshow-container img{
+          height: 600px;
+          object-fit: cover;
+      }
+      .mySlides {
+          display: none;
+      }
+      .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 45%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+      }
+      .next {
+          right: 120px;
+          border-radius: 3px 0 0 3px;
+      }
+      .prev{
+          
+          left: 120px;
+          border-radius: 3px 0 0 3px;
+      }
+      .prev:hover, .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+      }
+      .dot-container {
+          text-align: center;
+          padding: 10px;
+          z-index: 7;
+          margin-top: -175px;
+          background: transparent;
+      }
+      .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #ffffff;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+      }
+      .active {
+          background-color: #3c3232;
+      }
+      .show{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 600px;
+          margin-top: 10px;
+      }
+      .cont{
+          width: 250px;
+          height: 500px;
+          box-sizing: border-box;
+          border:1px solid rgb(83, 80, 80);
+          box-shadow: 2px 3px 2px rgb(128, 123, 123);
+          display: inline;
+          margin-right: 10px;
+      }
+      .cont img{
+          width: 250px;
+          height: 500px;
+          object-fit: fill;
+      }
+      #down,#dow{
+          position: relative;
+          bottom: -70px;
+      }
+      .sale{
+          width: 100%;
+          height: 1100px;
+          background-color: rgb(255, 236, 225);
+      }
+      #best{
+          font-family: "Ruthie", cursive;
+          text-align: center;
+          color: rgb(127, 70, 181);
+          font-size: 50px;
+      }
+      #new{
+          font-size: 30px;
+          text-align: center;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          margin-top: -30px;
+          margin-bottom: 0px;
+      }
+      .container{
+          width: 100%;
+          height: 450px;
+          display: flex;
+          margin-top: 10px;
+          justify-content: center;
+          align-items: center;
+      }
+      .item{
+          width: 350px;
+          height: 380px;
+          background-color: aqua;
+          margin-top: 10px;
+          margin-right: 20px;
+          border: 2px solid rgb(169, 205, 255);
+      }
+      .item img{
+          width: 330px;
+          height: 280px;
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-top: 10px;
+      }
+      #bestpicks{
+          font-family: "Ruthie", cursive;
+          text-align: center;
+          color: rgb(127, 70, 181);
+          font-size: 50px;
+      }
+      .bestpicks{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          height: 800px;
+      }
+      #limage{
+          width: 80%;
+          height: 400px;
+      }
+      .content{
+          width: 100%;
+          display: flex;
+          height: 100px;
+          align-items: center;
+          justify-content: center;
+      }
+      .conten{
+          width: 20%;
+          height: 100px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+      .conten img{
+          height: 100px;
+          color: black;
+          display: inline;
+          transition: all 0.15s ease-in;
+      }
+      #gift{
+          width: 100px;
+      }
+      #truck{
+          width: 140px; 
+      }
+      #phone{
+          width: 100px;
+      }
+      #shield{
+          width: 100px;
+      }
+      .contentext{
+          font-size: 24px;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          color: rgb(65, 58, 58);
+          margin-top: 10px;
+          margin-bottom: -15px;
+      }
+      .contenttext{
+          font-size: 15px;
+          font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          color: rgb(131, 122, 122);    
+      }
+      .conten img:hover{
+          scale: 0.9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    
+<div class="slideshow-container">
+  <div class="mySlides fade">
+      <img src="./img/cont3.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+      <img src="./img/cont3.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+      <img src="./img/cont3.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+      <img src="./img/cont3.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+      <img src="./img/cont3.jpeg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+
+<div class="dot-container" style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+    <div class="posts">
+      <p>Just for you</p>
+      <p id="text">Welcome to CraftWonders</p>
+      <p id="tex">
+        Our dreamy crafts are inspired by the nature and travel,moments and
+        memories.
+      </p>
+    </div>
+    <div class="show">
+      <div class="cont">
+        <img
+          src="./img/cont1.webp" alt=""
+        />
+      </div>
+      <div class="cont" id="dow">
+        <img src="./img/cont2.jpg" alt="" />
+      </div>
+      <div class="cont">
+        <img src="./img/cont3.jpeg" alt="" />
+      </div>
+      <div class="cont" id="down">
+        <img src="./img/cont4.jpeg" alt="" />
+      </div>
+      <div class="cont">
+        <img src="./img/cont5.jpg" alt="" />
+      </div>
+    </div>
+    <div class="sale">
+        <p id="best">Best for you</p>
+        <p id="new">New collection best seller</p>
+        <div class="container">
+            <div class="item">
+                <img src="./img/item1.avif" alt="">
+                <p class="info"></p>
+                <p class="price"></p>
+            </div>
+            <div class="item">
+                <img src="./img/item2.avif" alt="">
+                <p class="info"></p>
+                <p class="price"></p>
+            </div>
+            <div class="item">
+                <img src="./img/item3.avif" alt="">
+                <p class="info"></p>
+                <p class="price"></p>
+            </div>
+            <div class="item">
+                <img src="./img/item4.avif" alt="">
+                <p class="info"></p>
+                <p class="price"></p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="item">
+                <img src="./img/item5.avif" alt="">
+                <p class="info"></p>
+                <p class="price"></p>
+            </div>
+            <div class="item">
+                <img src="./img/item6.avif" alt="">
+                <p class="info"></p>
+                <p class="price"></p>
+            </div>
+            <div class="item">
+                <img src="./img/item7.avif" alt="">
+                <p class="info"></p>
+                <p class="price"></p>
+            </div>
+            <div class="item">
+                <img src="./img/item8.avif" alt="">
+                <p class="info"></p>
+                <p class="price"></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="conten" ><img id="gift"src="./img/gift.png" alt="">
+            <p class="contentext">Free easy returns</p>
+            <p class="contenttext">return to 7 days</p>
+        </div>
+        <div class="conten" ><img id="truck" src="./img/truct.svg" alt="">
+            <p class="contentext">Free delivery monday</p>
+            <p class="contenttext">orders above 	&#8377;999</p>
+        </div>
+        <div class="conten" ><img id="phone" src="./img/phone.png" alt="">
+            <p class="contentext">All day support</p>
+            <p class="contenttext">24/7 support care</p>
+        </div>
+        <div class="conten" ><img id="shield" src="./img/shield.webp" alt="">
+            <p class="contentext">Secure checkout</p>
+            <p class="contenttext">100% verified by paypal</p>
+        </div>
+    </div>
+  </body>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+    function search(){
+      search=document.getElementById('searchbar');
+      search.style.display='inline';
+      document.getElementsByClassName('buttons')[0].style.right='-250px';
+    }
+  </script>
+</html>

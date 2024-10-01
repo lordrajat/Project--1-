@@ -1,0 +1,211 @@
+.top{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+}
+.name{
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+    font-family:'Raleway';
+    color: white;
+}
+.body-img{
+    background-image: url('/pics/p1.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-color:black;
+    height: 45vh; 
+    margin: 3px; 
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.top ul{
+    list-style: none;
+    display: flex;
+    width: 59%;
+    align-items: center;
+    padding: 20px;
+    margin-left: 40px;
+    
+}
+#title{
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.top p{
+    font-family: "Madimi One", sans-serif;
+    color: rgb(3, 107, 107);
+    margin-right: 250px;
+}
+.top ul li{
+    padding: 20px;
+    margin-right: 0px;
+    font-size: 20px;
+}
+.top ul li:hover{
+    
+    color:rgba(167, 93, 93, 0.89) ;
+    cursor: pointer;
+    scale: 1.08;
+}
+
+.buttons{
+    position: flex-end;
+    
+    transition: all 0.2s;
+}
+.buttons button{
+    border-radius: 50%;
+    border: 1px solid b0px, serif;
+}
+.buttons input{
+    display: none;
+    width: 250px;
+    height: 30px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+.buttons img{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2px;
+    row-gap: 5px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width:300px;
+    transition: box-shadow 0.35s;
+        
+}
+.item:hover{
+    box-shadow: 0 0px 6px rgba(45, 44, 44, 0.6); 
+}
+.item-img{
+    justify-content: center; 
+    align-items: center; 
+    display: flex;
+    height:175px;
+    padding-bottom: 30px;
+}
+.item-name{
+    font-size: 18px;
+    font-family: 'RALEWAY';
+}
+.item-type{
+    font-size: 16px;
+    padding-top: 3px;
+    font-family: 'RALEWAY';
+}
+
+.item-price{
+    font-size: 18px;
+    font-family: 'RALEWAY';
+    padding-bottom: 9px;
+    padding-top:7px;
+    
+}
+.add-to-cart{
+    background-color: rgba(184, 121, 108, 0.827);
+    font-family: 'RALEWAY';
+    color: white;
+    font-size: 20px;
+    border: none;
+    align-items: center;
+}
+.selection{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-right: 15px;
+    
+}
+.selection ul li{
+    list-style: none;
+    padding: 20px;
+    padding-left: 0px;
+    padding-top: 0px;
+    margin: 10px;
+    margin-top: 0px;
+    font-size: 20px;
+    transition: color 0.3s;
+
+}
+.selection ul li a{
+    color: inherit;
+    text-decoration: none;
+}
+.selection ul li:hover{
+    color: rgb(184, 119, 119);
+    text-decoration: underline;
+}
+ul {
+    display: inline-block;
+    padding-inline-start: 0px;
+}
+
+.filter-condition{
+    padding: 5px;
+    height: 300px;
+    font-size: 20px;
+    font-family: 'RALEWAY';
+    
+
+    margin: 0px;
+}
+    
+.filter-condition select{
+    width: 300px;
+    color: rgb(0, 0, 0);
+    background: transparent;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'RALEWAY';
+}
+.indicator{
+    font-family: 'RALEWAY';
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 0;
+    justify-content: flex-start;
+    
+    
+}
+.selection-heading{
+    font-family: 'RALEWAY';
+    font-weight: bold;
+    font-size: 22px;
+    padding: 20px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin: 10px;
+    margin-bottom: 2px;
+    border-bottom: 1.5px solid rgb(103, 102, 102);
+    
+}
+.item-area{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+}

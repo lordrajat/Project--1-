@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Mirza:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Mirza:wght@400;500;600;700&family=Tienne:wght@400;700;900&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Mirza:wght@400;500;600;700&family=Ruthie&family=Tienne:wght@400;700;900&display=swap"
+    rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>CraftWonders | Contact Us</title>
+    <style>
+        .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        top:30px;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+        .top{
+            display: flex;
+            width: 100%;
+            height: 60px;
+            align-items: center;
+        }
+
+        .top ul{
+            list-style: none;
+            display: flex;
+            width: 59%;
+            align-items: center;
+            padding: 20px;
+            margin-left: 40px;
+            
+        }
+        #title{
+            font-size: 25px;
+            margin-left: 10px;
+        }
+
+        .top p{
+            font-family: "Madimi One", sans-serif;
+            color: rgb(3, 107, 107);
+            margin-right: 250px;
+        }
+        .top ul li{
+            padding: 20px;
+            margin-right: 0px;
+            font-size: 20px;
+        }
+        .top ul li:hover{
+            
+            color:rgba(167, 93, 93, 0.89) ;
+            cursor: pointer;
+            scale: 1.08;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            color: #2E8B57;
+            margin-bottom: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #666;
+        }
+        nav ul li a:hover {
+            color: #2E8B57;
+        }
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        .contact-info h2 {
+            color: #2E8B57;
+            margin-bottom: 10px;
+        }
+        .contact-info p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .contact-form {
+            margin-top: 30px;
+        }
+        .contact-form h2 {
+            color: #2E8B57;
+            margin-bottom: 20px;
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label {
+            margin-bottom: 10px;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        .contact-form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #2E8B57;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #1E703F;
+        }
+    </style>
+</head>
+<body>
+    <%- include('./partials/nav.ejs',{cartItems:cartItems}) %>
+    <div class="container">
+
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Have a question, suggestion, or just want to say hello? We'd love to hear from you!</p>
+            <p><strong>Crafters' Corner Headquarters</strong><br>123 Crafting Street<br>Craftville, USA</p>
+            <p><strong>Phone:</strong> 555-123-4567<br><strong>Email:</strong> info@crafterscorner.com</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Contact Form</h2>
+            <form action="/contact-us" method="POST">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="message">Your Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
